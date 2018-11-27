@@ -1,20 +1,4 @@
-Skip to content
- 
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- @eTarget1 Sign out
-1
-0 0 alexisadorn/Flatiron-AR-Rack-ORM
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-Flatiron-AR-Rack-ORM/orm-mapping-db-to-ruby-object-lab-noukod-000/spec/student_spec.rb
-22e88e6  on Oct 31, 2017
-@alexisadorn alexisadorn Adding labs
-     
-191 lines (159 sloc)  4.59 KB
 require_relative 'spec_helper'
 
 describe Student do
