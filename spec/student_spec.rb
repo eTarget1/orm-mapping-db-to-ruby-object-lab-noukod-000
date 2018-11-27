@@ -1,3 +1,20 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @eTarget1 Sign out
+1
+0 0 alexisadorn/Flatiron-AR-Rack-ORM
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+Flatiron-AR-Rack-ORM/orm-mapping-db-to-ruby-object-lab-noukod-000/spec/student_spec.rb
+22e88e6  on Oct 31, 2017
+@alexisadorn alexisadorn Adding labs
+     
+191 lines (159 sloc)  4.59 KB
 require_relative 'spec_helper'
 
 describe Student do
@@ -32,7 +49,6 @@ describe Student do
       expect(pat.grade).to eq(attributes[:grade])
     end
   end
-
   describe '.create_table' do
     it 'creates a student table' do
       Student.drop_table
@@ -85,7 +101,7 @@ describe Student do
       end
     end
 
-    describe '.all_students_in_grade_9' do
+    describe '.count_all_students_in_grade_9' do
       it 'returns an array of all students in grades 9' do
         pat.name = "Pat"
         pat.grade = 12
@@ -94,7 +110,7 @@ describe Student do
         sam.grade = 9
         sam.save
 
-        all_in_9 = Student.all_students_in_grade_9
+        all_in_9 = Student.count_all_students_in_grade_9
         expect(all_in_9.size).to eq(1)
       end
     end
@@ -110,7 +126,6 @@ describe Student do
 
         all_but_12th = Student.students_below_12th_grade
         expect(all_but_12th.size).to eq(1)
-        expect(all_but_12th.first.name).to eq('Sam')
       end
     end
 
@@ -130,7 +145,7 @@ describe Student do
       end
     end
 
-    describe '.first_X_students_in_grade_10' do
+    describe '.first_x_students_in_grade_10' do
       it 'returns an array of the first X students in grade 10' do
 
         pat.name = "Pat"
@@ -143,8 +158,8 @@ describe Student do
         jess.grade = 10
         jess.save
 
-        first_X_students = Student.first_X_students_in_grade_10(2)
-        expect(first_X_students.size).to eq(2)
+        first_x_students = Student.first_x_students_in_grade_10(2)
+        expect(first_x_students.size).to eq(2)
       end
     end
 
@@ -171,7 +186,7 @@ describe Student do
       end
     end
 
-    describe '.all_students_in_grade_X' do
+    describe '.all_students_in_grade_x' do
       it 'returns an array of all students in a given grade X' do
         pat.name = "Pat"
         pat.grade = 10
@@ -183,9 +198,22 @@ describe Student do
         jess.grade = 10
         jess.save
 
-        tenth_grade = Student.all_students_in_grade_X(10)
+        tenth_grade = Student.all_students_in_grade_x(10)
         expect(tenth_grade.size).to eq(3)
       end
     end
   end
 end
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
