@@ -36,7 +36,7 @@ class Student
     end.first
   end
 
-  def self.count_all_students_in_grade_9
+  def self._all_students_in_grade_9
     sql = <<-SQL
       SELECT * FROM students
       WHERE grade = 9
@@ -50,7 +50,7 @@ class Student
   def self.students_below_12th_grade
     sql = <<-SQL
       SELECT * FROM students
-      WHERE grade IS NOT 12
+      WHERE grade < 12
       SQL
 
       DB[:conn].execute(sql).map do |row|
